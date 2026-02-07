@@ -1,9 +1,5 @@
 import React from "react";
 
-
-
-
-
 export const metadata = {
   title: "Web Development & SEO Agency in India",
   description:
