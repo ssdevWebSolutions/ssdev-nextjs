@@ -19,16 +19,17 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <NavBar />
+    "hello"
+      {/* <NavBar /> */}
       <main>
-        <Hero />
-        <Services />
-        <ProcessAnimation />
-        <Clients />
+        {/* <Hero /> */}
+        {/* <Services /> */}
+        {/* <ProcessAnimation /> */}
+        {/* <Clients /> */}
         {/* <Portfolio /> */}
         {/* <HowWeWorkSection /> */}
         
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         {/* <CTA /> */}
         {/* <SocialSection /> */}
         {/* <AboutContact /> */}
