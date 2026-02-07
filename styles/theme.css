@@ -1,0 +1,14 @@
+:root{
+  --bg:#000000;
+  --surface:#ffffff;
+  --text:#000000;
+  --text-inv:#ffffff;
+  --muted:#9CA3AF;
+  --gap:24px;
+  --max-width:1100px;
+  --radius:12px;
+}
+
+/* future: [data-theme="light"], [data-theme="dark"] blocks could live here */
+
+

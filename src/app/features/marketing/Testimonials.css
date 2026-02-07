@@ -1,0 +1,93 @@
+
+    .testimonials-section {
+      background-color: #ffffff;
+      padding: 64px 24px;
+    }
+
+    .testimonials-container {
+      max-width: var(--max-width, 1200px);
+      margin: 0 auto;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .testimonials-title {
+      font-family: var(--font-playfair, serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .testimonials-subtitle {
+      font-family: var(--font-manrope, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial);
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .testimonial-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 26px;
+      background-color: #ffffff;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .testimonial-card:hover {
+      box-shadow: 0 20px 40px rgba(2, 6, 23, 0.06);
+      transform: translateY(-8px);
+    }
+
+    .testimonial-text {
+      font-family: var(--font-manrope, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial);
+      color: #555;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .testimonial-info h4 {
+      font-family: var(--font-manrope, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+
+    .testimonial-info p {
+      font-family: var(--font-manrope, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial);
+      font-size: 0.75rem;
+      color: #888;
+    }
+  

@@ -1,0 +1,45 @@
+'use client';
+
+import * as React from 'react';
+
+export type AnimatedLogoProps = { size?: number };
+
+export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ size = 48 }) => {
+  const [ready, setReady] = React.useState(false);
+  React.useEffect(() => {
+    const id = window.setTimeout(() => setReady(true), 220); // slightly longer delay before reveal
+    return () => window.clearTimeout(id);
+  }, []);
+
+  const style: React.CSSProperties = {
+    width: size,
+    height: size, // fallback, will be overridden by svg internal aspect ratio
+    filter: ready ? 'blur(0px)' : 'blur(12px)',
+    opacity: ready ? 1 : 0,
+    transform: ready ? 'scale(1)' : 'scale(0.985)',
+    transition: 'filter 1.3s ease, opacity 1.3s ease, transform 1.3s ease',
+    display: 'block'
+  };
+
+  return (
+    <div aria-label="SSDEV logo" role="img" style={{ width: size }}>
+      <svg
+        width={size}
+        height={size * (201 / 219)}
+        viewBox="0 0 219 201"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={style}
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M50.29 1.96125C46.15 4.48525 45.907 4.87227 21.062 48.3863C3.03601 79.9593 0 85.8702 0 89.3912C0 92.8882 1.71001 96.2803 11.402 112.001C28.953 140.472 29.094 140.635 36.5 141.051C38.7 141.174 62.669 141.213 89.765 141.136L139.029 140.996L142.549 137.746C146.96 133.674 147.962 128.825 145.475 123.584C142.08 116.43 142.977 116.555 90.795 115.996L44.089 115.496L36.045 102.752C31.62 95.7443 28.021 89.2193 28.046 88.2523C28.071 87.2863 35.833 72.9963 45.296 56.4963L62.5 26.4963L111 25.9963C147.054 25.6243 160.057 25.1773 161.672 24.2523C167.956 20.6553 169.877 12.5873 165.974 6.18626C162.184 -0.0307422 162.443 -0.00374681 105.282 0.000253191C55.641 0.00325319 53.367 0.0842518 50.29 1.96125ZM80.5 60.9413C74.901 63.2333 71.977 73.2593 75.388 78.4663C79.442 84.6533 78.086 84.4963 127.432 84.4963H172.447L182.641 100.458L192.835 116.421L190.484 120.458C189.19 122.679 181.672 135.746 173.775 149.496L159.418 174.496L108.959 174.996C52.638 175.554 55.011 175.238 51.493 182.652C49.32 187.231 50.199 192.067 53.971 196.29L56.835 199.496L113.312 199.77L169.789 200.044L172.848 197.47C174.531 196.055 179.168 189.181 183.153 182.196C187.138 175.211 196.67 158.696 204.335 145.496C215.313 126.59 218.362 120.541 218.701 116.996C219.113 112.691 218.519 111.479 204.96 88.9963C197.165 76.0713 189.627 64.2583 188.207 62.7463L185.626 59.9963L134.063 60.0592C105.703 60.0942 81.6 60.4913 80.5 60.9413Z"
+          fill="black"
+        />
+      </svg>
+    </div>
+  );
+};
+
+

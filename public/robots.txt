@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ssdev.tech
+
+# Sitemaps
+Sitemap: https://ssdev.tech/sitemap.xml
