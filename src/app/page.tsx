@@ -1,11 +1,5 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import Hero from "./features/marketing/Hero";
-import Services from "./features/marketing/Services";
-import ProcessAnimation from "./components/Processanimation";
-import Clients from "./features/Clients";
-import Footer from "./components/Footer";
-import TestimonialsSection from "./features/marketing/Testimonials";
+
 
 
 
@@ -34,7 +28,7 @@ export default function Page() {
         {/* <SocialSection /> */}
         {/* <AboutContact /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
